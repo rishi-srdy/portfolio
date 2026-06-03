@@ -1,17 +1,206 @@
 ---
-
+import Base from '../layouts/Base.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="portbox" aria-hidden="true">
+        <div class="portrait"></div>
+      </div>
+      <div class="wrap">
+        <div class="innercol">
+          <span class="mono eyebrow reveal">MS Computer Science — Georgia State University</span>
+          <h1 class="reveal">Rishikesh Sangareddypeta</h1>
+          <p class="positioning reveal">Full-lifecycle engineer — industry progression at <em>Copart</em> and active research at <em>Georgia State</em>.</p>
+          <p class="summary reveal">I build production backends and research-grade ML pipelines, from Spring&nbsp;Boot microservices to multimodal motion-analysis systems. Currently seeking software, backend, ML/AI, and data engineering internships.</p>
+          <div class="metastrip mono reveal">
+            <span class="mi">Atlanta, GA</span>
+            <span class="mi">Local&nbsp;<b id="clock">--:--:--</b></span>
+            <span class="mi"><span class="dot"></span>Available — Summer 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="block" id="work">
+      <div class="wrap grid">
+        <div class="rail reveal">
+          <span class="ghost">01</span>
+          <span class="mono lbl">Selected Work</span>
+        </div>
+        <div class="content">
+
+          <article class="entry reveal">
+            <div class="meta">
+              <span class="mono">Georgia State University</span>
+              <span class="mono">Jan 2026 — Present</span>
+            </div>
+            <h3>Research Assistant — MORSE Lab</h3>
+            <p class="progression">Human movement &amp; rehabilitation research · Atlanta, GA</p>
+            <p class="desc">Developing a <strong>multimodal IMU + camera pipeline</strong> that quantifies hand-movement smoothness for clinical assessment. Fuses inertial sensor signals with MediaPipe pose data and computes a <span class="hl">Normalized Jerk Score</span> as the primary smoothness metric.</p>
+            <div class="stack">
+              <span class="tag">Python</span><span class="tag">MediaPipe</span><span class="tag">Signal Processing</span><span class="tag">NumPy</span><span class="tag">Sensor Fusion</span>
+            </div>
+          </article>
+
+          <article class="entry reveal">
+            <div class="meta">
+              <span class="mono">Copart India Center</span>
+              <span class="mono">Feb 2024 — Aug 2025</span>
+            </div>
+            <h3>Software &amp; Full-Stack Developer</h3>
+            <p class="progression">Progressed <b>QA</b> → <b>Salesforce</b> → <b>Software Developer</b> · Hyderabad, India</p>
+            <p class="desc">Built <strong>Java / Spring Boot</strong> microservices for enterprise-scale auction and seller-billing workflows, including a migration to a <strong>Java–MariaDB</strong> microservices architecture with distributed locking. Authored <span class="hl">~200–250 automated UI &amp; API tests</span> and a regression suite that <span class="hl">cut manual QA effort ~40%</span>.</p>
+            <div class="stack">
+              <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MariaDB</span><span class="tag">Selenium</span><span class="tag">Salesforce</span><span class="tag">CI/CD</span>
+            </div>
+          </article>
+
+          <article class="entry reveal">
+            <div class="meta">
+              <span class="mono">SmartBridge</span>
+              <span class="mono">Apr 2023 — Jan 2024</span>
+            </div>
+            <h3>AI &amp; Machine Learning Intern</h3>
+            <p class="progression">Applied AI/ML projects &amp; student mentorship · Hyderabad, India</p>
+            <p class="desc">Trained and fine-tuned <strong>ML / deep-learning models</strong> (ResNet, YOLO) with TensorFlow and PyTorch, built <strong>Flask</strong> APIs and dashboards for inference and visualization, and <span class="hl">mentored undergraduate students</span> on end-to-end AI/ML project delivery.</p>
+            <div class="stack">
+              <span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">Flask</span><span class="tag">ResNet</span>
+            </div>
+          </article>
+
+          <article class="entry reveal">
+            <div class="meta">
+              <span class="mono">KMIT — R&amp;D Lab</span>
+              <span class="mono">Sep 2022 — Jan 2024</span>
+            </div>
+            <h3>Research Intern — ML &amp; Computer Vision</h3>
+            <p class="progression">Medical imaging &amp; computer vision · Hyderabad, India</p>
+            <p class="desc">Built histopathology AI operating on <strong>~8&nbsp;GB whole-slide images</strong> with a memory-bounded PyVips tiling pipeline. Combined <strong>YOLOv5/8 detection with U-Net segmentation</strong> for Nottingham grading; a related ResNet stroke-classification model reached <span class="hl">~91% accuracy</span>.</p>
+            <div class="stack">
+              <span class="tag">YOLOv5/8</span><span class="tag">U-Net</span><span class="tag">PyVips</span><span class="tag">OpenCV</span><span class="tag">PyTorch</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="block" id="projects">
+      <div class="wrap grid">
+        <div class="rail reveal">
+          <span class="ghost">02</span>
+          <span class="mono lbl">Projects</span>
+        </div>
+        <div class="content">
+          <div class="projects">
+
+            <a class="proj reveal" href="#">
+              <span class="mono ix">01</span>
+              <h4>Slidewalk <span class="arr">↗</span></h4>
+              <p>Memory-bounded streaming tiler that turns gigapixel whole-slide images into model-ready patches.</p>
+              <div class="stack"><span class="tag">Python</span><span class="tag">PyVips</span><span class="tag">OpenCV</span></div>
+            </a>
+
+            <a class="proj reveal" href="#">
+              <span class="mono ix">02</span>
+              <h4>JerkScore <span class="arr">↗</span></h4>
+              <p>Toolkit that computes Normalized Jerk Score from fused IMU and pose data, with clinician-facing plots.</p>
+              <div class="stack"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">MediaPipe</span></div>
+            </a>
+
+            <a class="proj reveal" href="#">
+              <span class="mono ix">03</span>
+              <h4>Auto-Annotate <span class="arr">↗</span></h4>
+              <p>MERN platform that trains models on COCO-style datasets to auto-generate image annotations, cutting manual labeling effort.</p>
+              <div class="stack"><span class="tag">React</span><span class="tag">Node</span><span class="tag">MongoDB</span><span class="tag">COCO</span></div>
+            </a>
+
+            <a class="proj reveal" href="/chat">
+              <span class="mono ix">04</span>
+              <h4>This Site’s Assistant <span class="arr">↗</span></h4>
+              <p>The chat on this site — a Gemini-backed assistant grounded in my résumé and project notes via context injection, with rate-limiting and a scoped prompt.</p>
+              <div class="stack"><span class="tag">Astro</span><span class="tag">Gemini</span><span class="tag">Serverless</span></div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS + EDUCATION -->
+    <section class="block" id="about">
+      <div class="wrap grid">
+        <div class="rail reveal">
+          <span class="ghost">03</span>
+          <span class="mono lbl">Skills &amp; Education</span>
+        </div>
+        <div class="content">
+          <div class="cols2">
+            <div class="skills">
+              <div class="skillgroup reveal">
+                <span class="mono gl">Languages</span>
+                <div class="items"><span>Java</span><span>Python</span><span>C++</span><span>SQL</span><span>JavaScript</span></div>
+              </div>
+              <div class="skillgroup reveal">
+                <span class="mono gl">Backend &amp; Data</span>
+                <div class="items"><span>Spring Boot</span><span>REST</span><span>Microservices</span><span>MariaDB</span><span>PostgreSQL</span><span>Docker</span><span>AWS</span></div>
+              </div>
+              <div class="skillgroup reveal">
+                <span class="mono gl">ML / Vision</span>
+                <div class="items"><span>PyTorch</span><span>TensorFlow</span><span>YOLOv5/8</span><span>U-Net</span><span>MediaPipe</span><span>OpenCV</span><span>scikit-learn</span></div>
+              </div>
+            </div>
+            <div class="edu">
+              <div class="ed reveal">
+                <span class="mono">Aug 2025 — May 2027 (expected)</span>
+                <h4>M.S. Computer Science</h4>
+                <div class="where">Georgia State University — Atlanta, GA · GPA 4.00</div>
+              </div>
+              <div class="ed reveal">
+                <span class="mono">2020 — 2024</span>
+                <h4>B.Tech, Computer Science</h4>
+                <div class="where">Keshav Memorial Institute of Technology — Hyderabad, India · CGPA 8.59</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="block contact" id="contact">
+      <div class="wrap grid">
+        <div class="rail reveal">
+          <span class="ghost">04</span>
+          <span class="mono lbl">Contact</span>
+        </div>
+        <div class="content">
+          <h2 class="reveal">Open to internships and a good <em>conversation</em>.</h2>
+          <div class="links reveal">
+            <a class="clink" href="mailto:rishisrdyp@gmail.com">
+              <span class="mono">Email</span>
+              <span class="v">rishisrdyp@gmail.com</span>
+            </a>
+            <a class="clink" href="https://github.com/rishi-srdy" target="_blank" rel="noopener">
+              <span class="mono">GitHub</span>
+              <span class="v">github.com/rishi-srdy</span>
+            </a>
+            <a class="clink" href="https://www.linkedin.com/in/REPLACE-ME" target="_blank" rel="noopener">
+              <span class="mono">LinkedIn</span>
+              <span class="v">linkedin.com/in/…</span>
+            </a>
+            <a class="clink" href="/chat">
+              <span class="mono">Or just</span>
+              <span class="v" style="color:var(--accent)">Ask AI →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

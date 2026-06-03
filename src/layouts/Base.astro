@@ -1,0 +1,71 @@
+---
+import { Font } from 'astro:assets';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Rishikesh Sangareddypeta — Portfolio',
+  description = 'Full-lifecycle engineer — industry progression at Copart and active research at Georgia State. Seeking software, backend, ML/AI, and data engineering internships.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') || 'light';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+    <Font cssVariable="--font-display" preload />
+    <Font cssVariable="--font-body" preload />
+    <Font cssVariable="--font-mono" />
+  </head>
+  <body>
+    <div class="scrollbar" id="scrollbar"></div>
+
+    <header class="site">
+      <div class="wrap">
+        <nav class="nav">
+          <a class="mark" href="/" aria-label="Rishikesh Sangareddypeta — home">
+            <span class="glyph">RS</span>
+            <span>Rishikesh&nbsp;Sangareddypeta</span>
+          </a>
+          <div class="navlinks">
+            <a class="nl" href="/#work">Work</a>
+            <a class="nl" href="/#projects">Projects</a>
+            <a class="nl" href="/#about">About</a>
+            <a class="nl" href="/#contact">Contact</a>
+            <a class="nl askai" href="/chat">Ask&nbsp;AI&nbsp;<span class="arr">→</span></a>
+            <button class="kbd" type="button" data-cmdk aria-label="Open command menu">⌘K</button>
+            <button class="themetoggle" type="button" aria-label="Toggle dark mode" aria-pressed="false"><span class="ti"></span></button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="site">
+      <div class="wrap">
+        <span class="mono">© 2026 Rishikesh Sangareddypeta</span>
+        <span class="mono">Atlanta, GA — Set in Space Grotesk &amp; Geist</span>
+      </div>
+    </footer>
+
+    <script is:inline src="/site.js"></script>
+  </body>
+</html>
