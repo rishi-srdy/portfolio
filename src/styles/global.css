@@ -1090,3 +1090,52 @@ footer.site .wrap {
         mask-composite: intersect;
     }
 }
+
+/* === mobile hero fix — append at the very end of global.css === */
+@media (max-width: 720px) {
+    .mark span:not(.glyph) {
+        display: none;
+    }
+
+    /* hide full name, show only RS */
+    .navlinks {
+        gap: 14px;
+    }
+
+    .hero {
+        min-height: auto;
+        display: block;
+        padding: 0 0 50px;
+    }
+
+    .hero .wrap {
+        padding: 28px 22px 0;
+    }
+
+    .hero .innercol {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 10vw, 48px);
+        margin-bottom: 22px;
+    }
+
+    .portbox {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 46vh;
+    }
+
+    .portrait {
+        opacity: 1;
+        background-position: 50% 18%;
+        -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%);
+    }
+
+    .portbox::after {
+        box-shadow: none;
+    }
+}
